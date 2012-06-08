@@ -1,0 +1,110 @@
+﻿<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<!--[if IE]> <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> <![endif]-->
+
+	<title>Facebook Event</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" href="../css/style.css">
+	<!--[if lt IE 9]>
+    	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+    <div id="fb-root"></div>
+    
+    <a class="back_to_index" href="../index.html">Facebook API demos</a>
+    
+    <section id="wrapper" class="clear_fix">
+    	<article>
+            <h2>Facebook Event</h2>
+        	<p>
+            	Specifies information about an event, including the location, event name, and which invitees plan to attend. The User, Page, and Application objects have an events connection.
+			</p>
+            <p>To read an Event, you need one of the following:</p>
+            <ul>
+            	<li>no access token if the event is public</li>
+				<li>a user access token for a user who can see the event if it has restricted visibility</li>
+				<li>an app access token for the app that created the event</li>
+				<li>a page access token for the page that created the event</li>
+            </ul>
+            <a class="button read_more" href="https://developers.facebook.com/docs/reference/api/event/" target="_blank">Read more</a>
+      	</article>
+        
+        <article>
+            <h2>Facebook Event Demo</h2>
+            <div id="login" class="standard_message_box hide"></div>
+
+            <section class="content">
+            	<header class="options_bar top_round">
+                    <button type="button" id="rsvpattending">Attending</button>
+                    <button type="button" id="rsvpunsure">Maybe</button>
+                    <button type="button" id="rsvpdeclined">No</button>
+                    <button type="button" id="peopleAttendingEvent" class="small">People attending event</button>
+                    <a class="button" href="https://www.facebook.com/events/425572280800968/" target="_blank">View this event on Facebook</a>
+                    <a class="post_to_fb  button" href="#">Post to Facebook</a>
+                </header>
+                
+                <article id="people_attending" class="hide">
+                    <p class="info_box"><span>&nbsp;</span><span id="pplCount">0</span> people have joined the countdown </p>
+                    <div class="avatars" id="avatars"></div>
+              	</article>
+         	</section>
+
+            <section id="countdown_dashboard">
+                <section class="dash weeks_dash">
+                	<div class="round_corner">
+                        <div class="digit">0</div>
+                        <div class="digit">0</div>
+                    </div>
+                    <span class="dash_title">weeks</span>
+                </section>
+                <section class="dash days_dash">
+                	<div class="round_corner">
+                        <div class="digit">0</div>
+                        <div class="digit">0</div>
+                  	</div>
+                    <span class="dash_title">days</span>
+                </section>
+                <section class="dash hours_dash">
+                	<div class="round_corner">
+                        <div class="digit">0</div>
+                        <div class="digit">0</div>
+                  	</div>
+                    <span class="dash_title">hours</span>
+                </section>
+                <section class="dash minutes_dash">
+                	<div class="round_corner">
+                    	<div class="digit">0</div>
+                    	<div class="digit">0</div>
+                   	</div>
+                    <span class="dash_title">minutes</span>
+                </section>
+                <section class="dash seconds_dash">
+                	<div class="round_corner">
+                        <div class="digit">0</div>
+                        <div class="digit">0</div>
+                  	</div>
+                    <span class="dash_title">seconds</span>
+                </section>
+            </section>
+            <div id="complete_info_message" class="success_box"><span>&nbsp;</span>COMPLETED</div>
+       	</article>
+ 	</section>
+    
+    <script src="//code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="../js/jquery.lwtCountdown-1.0.js"></script>
+    <script src="//connect.facebook.net/en_US/all.js"></script>
+    <script src="../js/fb.config.js"></script>
+    <script src="../js/facebook.event.js"></script>
+
+</body>
+</html>

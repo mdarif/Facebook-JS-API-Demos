@@ -1,0 +1,43 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<!--[if IE]> <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> <![endif]-->
+
+	<title>Invite friends</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" href="../css/style.css">
+	<!--[if lt IE 9]>
+    	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+	
+    <a class="back_to_index" href="../index.html">Facebook API demos</a>
+    
+	<section id="wrapper" class="clear_fix">
+        <div id="fb-root"></div>
+
+        <fb:serverFbml style="width: 750px;height:800px">
+            <script type="text/fbml">
+                <fb:fbml>
+                    <fb:request-form action="http://www.facebook.com/" method="POST" invite="true" type="Invite Title"
+                                     content="Message to a friend, you can put a link here (see below)&lt;fb:req-choice url='http://www.facebook.com' label='Join Facebook!' /&gt;">
+                        <fb:multi-friend-selector showborder="false" actiontext="Invite Button Title"  rows="3" showborder="true" condensed="false" style="width: 400px;" >
+                    </fb:request-form>
+                </fb:fbml>
+            </script>
+        </fb:serverFbml>
+	</section>
+    
+    <script src="//code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="//connect.facebook.net/en_US/all.js"></script>
+    <script src="../js/fb.invite.friends.js"></script>
+</body>
+</html>

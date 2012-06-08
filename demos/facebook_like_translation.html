@@ -1,0 +1,58 @@
+﻿<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<!--[if IE]> <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> <![endif]-->
+
+	<title>Facebook Like Translation</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" href="../css/style.css">
+	<!--[if lt IE 9]>
+    	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+    <div id="fb-root"></div>
+    
+    <a class="back_to_index" href="../index.html">Facebook API demos</a>
+    
+    <section id="wrapper" class="clear_fix">
+    	<article>
+            <h2>Facebook Internationalization</h2>
+        	<p>
+            	Facebook is currently available in over 70 languages, thanks to a framework that allows our user community to translate the text on Facebook. By integrating with Facebook, you can take advantage of our Translations framework immediately, so you can enjoy the benefits that translation can bring to your Platform application or website.
+			</p>
+            <p class="note_box">
+            	<span>&nbsp;</span>
+                If your site is in Arabic, reference this script: <strong>//connect.facebook.net/ar_AR/all.js</strong>
+            </p>
+            <a class="button read_more" href="https://developers.facebook.com/docs/internationalization/" target="_blank">Read more</a>
+      	</article>
+        
+    	<h2 id="name">Facebook Like Translation</h2>
+		<div class="fb-like" data-href="www.mohammedarif.com" data-send="false" data-show-faces="true" data-layout="button_count" data-width="auto"></div>
+  	</section>
+	
+    <script src="//code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="//connect.facebook.net/ar_AR/all.js"></script>
+    <script src="../js/fb.config.js"></script>
+    <script>
+    	window.fbAsyncInit = function() {
+			FB.init({
+				appId: FBDemo.config.appId,
+				status: true,
+				cookie: true,
+				xfbml: true
+			});
+		};
+    </script>
+
+</body>
+</html>

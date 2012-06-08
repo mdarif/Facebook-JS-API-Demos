@@ -1,0 +1,51 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<!--[if IE]> <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> <![endif]-->
+
+	<title>Open Graph Demo</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width">
+	<meta property="og:title" content="Mohammed Arif Site Content" />
+    <meta property="og:type" content="blog" />
+    <meta property="og:url" content="http://www.mohammedarif.com/demo/fb_open_graph_like.html" />
+    <meta property="og:image" content="http://i1.ytimg.com/vi/LGyPIhhJlAM/3.jpg" />
+    <meta property="og:site_name" content="mohammedarif.com" />
+    <meta property="fb:app_id" content="150352665021939" />
+    <meta property="og:description" content="Invite your friends, and get ready to rock to exclusive Coca-Cola Music from One Night Only. If you love to sing and dance, rock the air guitar, or lip sync, now's your chance to share your voice on this amazing band's latest release. Go ahead – get inspired and have some fun!" />
+	
+    <link rel="stylesheet" href="../css/style.css">
+	<!--[if lt IE 9]>
+    	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+	
+    <a class="back_to_index" href="../index.html">Facebook API demos</a>
+    
+	<section id="wrapper" class="clear_fix">
+    	<h2>Facebook Event Open graph like</h2>
+        <div class="fb-like" data-href="www.mohammedarif.com" data-send="false" data-show-faces="true" data-action="like" data-layout="standard" data-width="372" data-colorscheme="light"></div>
+        <div id="fb-root"></div>
+ 	</section>
+    
+    <script src="//code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="//connect.facebook.net/en_US/all.js"></script>
+    <script src="../js/fb.config.js"></script>
+	<script> 
+		window.fbAsyncInit = function() {
+			FB.init({
+				appId: FBDemo.config.appId,
+				status: true,
+				cookie: true,
+				xfbml: true
+			});
+		};
+    </script>
+</body>
+</html>
