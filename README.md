@@ -69,4 +69,4 @@ Anyone and everyone is welcome to [contribute](#).
 
 ## Author
 
-* Mohammed Arif [@arif_iq](http://twitter.com/arif_iq), [github](https://github.com/mdarif)e
+* Mohammed Arif [@arif_iq](http://twitter.com/arif_iq), [github](https://github.com/mdarif)
