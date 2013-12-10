@@ -63,3 +63,10 @@ Anyone and everyone is welcome to [contribute](#).
 
 
 ## License
+
+* MIT/GPL license
+
+
+## Author
+
+* Mohammed Arif [@arif_iq](http://twitter.com/arif_iq), [github](https://github.com/mdarif)e
