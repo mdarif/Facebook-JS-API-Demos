@@ -1,15 +1,24 @@
-/* Facebook implementation main config file *
+/* JavaScript Boilerplate configuration file *
  * @version 1.0
-*/
-
+ */
+ /* Why do we need config?
+  * All URLs needed by the JavaScript
+  * Any strings that are displayed to the user
+  * Any HTML that needs to be created from JavaScript
+  * Settings (i.e., items per page)
+  * Repeated unique values
+  * Any value that may change in the future
+ */
 /*jshint forin:true, noarg:true, eqeqeq:true, bitwise:true, undef:true, curly:true, browser:true, devel:true, indent:4, maxerr:50, jquery:true */
 
 /*jslint devel: true, nomen: true, unparam: true, sloppy: true, indent: 4 */
 
+/*global jQuery, window*/
+
 (function (FBDemo, undefined) {
 	FBDemo.config = {
         debug : true,
-		appId : '310499282370730',
+		appId : '150352665021939',
 		eventId : '365493146839588',
         fbPosts					:	{
 			eventShare	:	{
@@ -29,14 +38,14 @@
 			'min' : 0,
 			'sec' : 0
 		},
-		completeInfoMessage : "#complete_info_message",
-		countdownDashboard : "#countdown_dashboard",
+		completeInfoMessage : "#complete-info-message",
+		countdownDashboard : "#countdown-dashboard",
 		rsvpAttending : "#rsvpattending",
 		rsvpUnsure : "#rsvpunsure",
 		rsvpDeclined : "#rsvpdeclined",
 		peopleAttendingEvent :	"#peopleAttendingEvent",
 		loginElm :	"#login",
-		peopleAttending :	"#people_attending",
+		peopleAttending :	"#people-attending",
 		pplCount :	"#pplCount",
 		avatars :	"#avatars",
 		logoutElm :	"#logout",

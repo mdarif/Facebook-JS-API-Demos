@@ -13,9 +13,9 @@
 
 /*jshint forin:true, noarg:true, eqeqeq:true, bitwise:true, undef:true, curly:true, browser:true, devel:true, indent:4, maxerr:50, jquery:true */
 
-/*jslint devel: true, nomen: true, unparam: true, sloppy: true, indent: 4 */
+/*jslint devel: true, nomen: true, unparam: true, sloppy: true, indent: 4, newcap:true */
 
-/*global FB:false*/
+/*global FB:false, jQuery, window*/
 
 (function (FBDemo, $, undefined) {
 	/**
@@ -41,26 +41,58 @@
 			*/
 			this.init = function () {
 				_this.FBInit();
+				_this.FBLogin();
                 return this;
             };
+            /*
+			* Click event for FB logout
+			*/
+			this.FBLogin = function () {
+				$(function () {
+					$(FBDemo.config.FBLogin).click(function () {
+						FB.getLoginStatus(function (response) {
+							if (response.status === "unknown") {
+								_this.facebookLogin();
+							} else {
+								FB.logout();
+							}
+						});
+					});
+				});
+			};
+			/*
+			* Facebook login
+			*/
+			this.facebookLogin = function () {
+				FB.login(function (response) {
+					if (response.status === "connected") {
+						$.log("User is logged in and granted some permissions.");
+					} else if ((response.status === 'not_authorized') || response.authResponse === null) {
+						$.log("User has not granted permissions!");
+					}
+
+					_this.onFacebookInitialLoginStatus(response);
+				});
+			};
 			/*
 			* Callback for showFriendsList function
 			*/
 			this.onFriendsListLoaded =  function (response) {
 				var divTarget = $(FBDemo.config.FriendsListContainer),
 					data = response.data,
-					html = "";
-				for (var friendIndex = 0; friendIndex < data.length; friendIndex++) {
+					html = "",
+					len = data.length,
+					friendIndex;
+				for (friendIndex = 0; friendIndex < len; friendIndex += 1) {
 					html += "<div><strong>" + data[friendIndex].name + "</strong></div>";
 				}
-				
 				divTarget.html(html);
 			};
 			/*
 			* Show friend list
 			*/
 			this.showFriendsList = function () {
-				FB.api('/me/friends', _this.onFriendsListLoaded);  
+				FB.api('/me/friends', _this.onFriendsListLoaded);
 			};
 			/*
 			* Initialize Facebook
@@ -72,11 +104,11 @@
 					cookie : true,
 					xfbml  : true
 				});
-				
+
 				FB.Event.subscribe('auth.login', function (response) {
 					_this.onFacebookInitialLoginStatus(response);
 				});
-		
+
 				FB.getLoginStatus(_this.onFacebookInitialLoginStatus);
 			};
 			/*
@@ -94,7 +126,7 @@
         return new _facebook();
     }());
 
-	/**
-	* Check to evaluate whether 'FBDemo' exists in the global namespace - if not, assign window.FBDemo an object literal
-	*/
-})(window.FBDemo = window.FBDemo || {}, jQuery);
+/**
+* Check to evaluate whether 'FBDemo' exists in the global namespace - if not, assign window.FBDemo an object literal
+*/
+}(window.FBDemo = window.FBDemo || {}, jQuery));

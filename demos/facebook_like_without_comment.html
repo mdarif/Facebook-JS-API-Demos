@@ -17,31 +17,32 @@
     	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 </head>
-<body>
+<body class="without-comment">
 
     <div id="fb-root"></div>
     
-    <a class="back_to_index" href="../index.html">Facebook API demos</a>
+    <a class="back-to-index" href="../index.html">Facebook API demos</a>
     
-    <section id="wrapper" class="clear_fix hide_fb_like_comment">
-    	<article class="without_comment">
+    <section id="wrapper" class="clear-fix hide-fb-like-comment">
+    	<article class="without-comment">
             <h2>Facebook Like Button (No comment popup)</h2>
         	<p>
             	The Like button lets a user share your content with friends on Facebook. When the user clicks the Like button on your site, a story appears in the user's friends' News Feed with a link back to your website.
 			</p>
-            <p class="note_box">
+            <p class="note-box">
             	<span>&nbsp;</span>
                 Hide the comment button through CSS.
             </p>
-            <pre class="code">.fb_edge_comment_widget  {
-	display:none
+            <pre class="code">.fb_edge_widget_with_comment  {
+    height:24px;
+    overflow:hidden;
 }
            	</pre>
-            <a class="button read_more" href="https://developers.facebook.com/docs/reference/plugins/like/" target="_blank">Read more</a>
+            <a class="button read-more" href="https://developers.facebook.com/docs/reference/plugins/like/" target="_blank">Read more</a>
       	</article>
         
         <h2>Facebook Like Without Comment Popup</h2>
-        <div class="fb-like" data-href="www.mohammedarif.com" data-send="false" data-show-faces="true" data-layout="button_count" data-width="800"></div>
+        <div class="fb-like" data-href="http://www.mohammedarif.com" data-send="false" data-show-faces="true" data-layout="button-count" data-width="800"></div>
     </section>
 
 	<script src="//code.jquery.com/jquery-1.7.1.min.js"></script>

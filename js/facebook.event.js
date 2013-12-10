@@ -12,9 +12,9 @@
 
 /*jshint forin:true, noarg:true, eqeqeq:true, bitwise:true, undef:true, curly:true, browser:true, devel:true, indent:4, maxerr:50, jquery:true */
 
-/*jslint devel: true, nomen: true, unparam: true, sloppy: true, indent: 4 */
+/*jslint devel: true, nomen: true, unparam: true, sloppy: true, indent: 4, newcap:true */
 
-/*global FB:false*/
+/*global FB:false, jQuery, window*/
 
 (function (FBDemo, $, undefined) {
 	/**
@@ -248,7 +248,7 @@
                     var i,
                         imgSrc;
 					$(FBDemo.config.pplCount).html(response.length);
-					for (i = 0; i < response.length; i++) {
+					for (i = 0; i < response.length; i += 1) {
 						imgSrc = "http://graph.facebook.com/" + response[i].uid + "/picture";
 						$(FBDemo.config.avatars).append("<div><img src='" + imgSrc + "' width='38' height='38' /></div>");
 					}
@@ -259,7 +259,7 @@
 			* FB share UI
 			*/
 			this.fbPublish = function () {
-				$(".post_to_fb").on("click", function () {
+				$(".post-to-fb").on("click", function () {
 					var shareInfo = FBDemo.config.fbPosts.eventShare;
 					shareInfo.method = 'feed';
 					shareInfo.link = shareInfo.link + FBDemo.config.eventId;
