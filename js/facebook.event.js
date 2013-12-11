@@ -142,9 +142,9 @@
 			*/
 			this.rsvpattending = function () {
 				if (_this.hasUserGrantedRSVPPermission === true) {
-					_this.myEventDecision('Attending');
+					_this.myEventDecision('attending');
 				} else {
-					_this.loginToFacebook('Attending');
+					_this.loginToFacebook('attending');
 				}
 			};
 			/*
@@ -154,9 +154,9 @@
 			*/
 			this.rsvpdeclined = function () {
 				if (_this.hasUserGrantedRSVPPermission === true) {
-					_this.myEventDecision('Declined');
+					_this.myEventDecision('declined');
 				} else {
-					_this.loginToFacebook('Declined');
+					_this.loginToFacebook('declined');
 				}
 			};
 			/*
@@ -166,9 +166,9 @@
 			*/
 			this.rsvpunsure = function () {
 				if (_this.hasUserGrantedRSVPPermission === true) {
-					_this.myEventDecision('Maybe');
+					_this.myEventDecision('maybe');
 				} else {
-					_this.loginToFacebook('Maybe');
+					_this.loginToFacebook('maybe');
 				}
 			};
 			/*

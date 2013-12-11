@@ -18,8 +18,8 @@
 (function (FBDemo, undefined) {
 	FBDemo.config = {
         debug : true,
-		appId : '150352665021939',
-		eventId : '365493146839588',
+		appId : '310499282370730', /*https://developers.facebook.com/apps/310499282370730?app_id=310499282370730*/
+		eventId : '1440567849505366', /*https://www.facebook.com/events/1440567849505366/*/
         fbPosts					:	{
 			eventShare	:	{
 				name: 'Facebook JS API Event',
